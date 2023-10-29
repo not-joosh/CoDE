@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1><img class = 'logo' src = './images/logo.svg'/></h1>
+      <!--PANEL-->
+      <section class = 'panel'>
+        <!--INPUT PANEL-->
+        <div class = 'input-panel'>
+          <!--BILL-->
+          <form>
+            <label>Bill</label><br />
+            <img id = 'dollar-icon' src = './images/icon-dollar.svg'/>
+            <input class = 'input-field' type = 'number' placeholder = '0'/>
+          </form>
+
+          <!--TIP-->
+          <form>
+            <label>Select Tip %</label><br />
+            <button 
+              class = "btn_5_percent"
+              type = "button"  
+              aria-label = "5%">
+              5%
+            </button>
+            <button 
+              class = "btn_10_percent"
+              type = "button"  
+              aria-label = "10%">
+              10%
+            </button>
+            <button 
+              class = "btn_10_percent"
+              type = "button"  
+              aria-label = "15%">
+              15%
+            </button>
+            <button 
+              class = "btn_25_percent"
+              type = "button"  
+              aria-label = "25%">
+              25%
+            </button>
+            <button 
+              class = "btn_50_percent"
+              type = "button"  
+              aria-label = "50%">
+              50%
+            </button>
+            <input 
+              class = 'custom-percentage' 
+              type = 'number'
+              placeholder = 'Custom'
+              aria-label="custom-tip"
+            />
+          </form>
+
+          <!--# OF PEOPLE-->
+          <form>
+            <label>Number of People</label><br /><span>Can't be zero</span><br />
+            <img id = 'person-icon' src = './images/icon-person.svg' alt="icon-person.svg" />
+            <input class = 'input-field' type = 'number' placeholder = "0"/>
+          </form>
+        </div>
+        <div class = "output-panel">
+          <div class = 'tip-container'>
+            <div>
+              <label>Tip Amount</label>
+              <label>/ person</label>
+            </div>
+            <div>
+              <label class = 'tip-amount'>$0.00</label>
+            </div>
+          </div>
+
+          <div class = 'total-container'>
+            <div>
+              <label>Total</label>
+              <label>/ person</label>
+            </div>
+            <div>
+              <label class = 'total-amount'>$0.00</label>
+            </div>
+          </div>
+          <button class = 'reset-btn'>RESET</button>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br />
+        Coded by 
+        <a
+          href="LINK" 
+          target = '_blank'
+        >BEA</a> & 
+        <a
+          href="https://github.com/not-joosh" 
+          target = '_blank'
+        >JOSH</a>.
+    </footer>
+    <script src = './app.js'></script>
+  </body>
+</html>

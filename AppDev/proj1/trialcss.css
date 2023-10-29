@@ -1,0 +1,292 @@
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan-2: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --Light-grayish-cyan-2: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-1: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --red: rgb(255, 102, 102);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Space Mono", sans-serif;
+}
+/*
+*    APPLIED STYLES
+*/
+
+h1 { /*LOGO IMAGE*/
+    text-align: center;
+}
+#dollar-icon {
+    /* background-color: aqua; */
+    transform: translateY(2px);
+}
+#person-icon {
+    /* background-color: red; */
+    transform: translateY(4px);
+}
+body {
+    background-color: var(--Light-grayish-cyan-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/**
+*
+*       INPUT PANEL
+*
+**/
+::selection {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+.panel {
+    background-color: var(--White);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.input-panel {
+    max-width: 200px;
+    color: var(--Dark-grayish-cyan-1);
+    font-weight: 700;
+    font-size: x-small;
+    margin-right: 1.2rem;
+}
+
+.input-panel label {
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+form img {
+    position: absolute;
+    margin-left: 0.8em;
+    width: 0.58rem;
+    filter: brightness(100%);
+}
+
+form {
+    margin: 0.2rem 0;
+    margin-bottom: 1.5rem;
+}
+
+form:last-child {
+    margin-bottom: 1.2em;
+}
+
+form:nth-child(2) input {
+    border: none;
+    padding: 0.6em 0;
+    width: 60px;
+    border-radius: 0.2rem;
+    font-size: x-small;
+    text-align: end;
+    transition: all 0.1s ease-in-out;
+    color: var(--Very-dark-cyan);
+}
+
+form:nth-child(2) button {
+    padding: 0.3em;
+    margin-bottom: 10px;
+    width: 60px;
+    border: none;
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    border-radius: 0.2rem;
+    transition: all 0.1s ease-in-out;
+}
+
+span {
+    margin-left: 20px;
+    font-size: 10px;
+    color: rgba(255, 0, 0, 0.6);
+    transform: translateY(200px);
+}
+
+form:nth-child(2) button:hover {
+    transform: scale(1.1);
+    background-color: var(--Strong-cyan);
+    box-shadow: 0px 3px 5px 0px var(--Dark-grayish-cyan-1); 
+    cursor: pointer;
+    color: white;
+}
+
+form:nth-child(2) button:active {
+    background-color: var(--Strong-cyan);
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.input-field {
+    font-weight: 700;
+    text-align: end;
+    border: none;
+    color: var(--Very-dark-cyan);
+    transition: all 0.1s ease-in-out;
+}
+
+form:nth-child(2) input:hover {
+    outline: var(--Strong-cyan) solid 1px;
+    cursor: pointer;
+}
+
+input:focus {
+    outline-color: var(--Strong-cyan);
+}
+
+.input-field::placeholder, 
+form:nth-child(2) input::placeholder {
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+
+/**
+*
+*       OUTPUT PANEL
+*
+**/
+.output-panel {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1.2rem; 
+    padding: 1rem;
+    margin: 0em;
+    width: 100%;
+    font-size: x-small;
+    color: var(--Dark-grayish-cyan-1);
+}
+
+.tip-container, 
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.8rem 0.5rem;
+}
+
+.total-container {
+    margin: 3rem 0.5rem;
+}
+
+.tip-container div:first-child, 
+.total-container div:first-child {
+    display: flex;
+    flex-direction: column;
+    font-size: 2%;
+    color: var(--Light-grayish-cyan-2);
+}
+
+.tip-container div:nth-child(2), 
+.total-container div:nth-child(2) {
+    margin-right: 5%;
+    color: var(--Strong-cyan);
+    font-size: 1.5rem;
+}
+
+.tip-container div:first-child label:first-child,
+.total-container div:first-child label:first-child
+{
+    font-size: 0.8rem;
+}
+
+.output-panel button {
+    width: 100%;
+    bottom: 0%;
+    padding: 0.8rem;
+    border-radius: 0.5em;
+    border: none;
+    margin-bottom: 5%;
+    cursor: pointer;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    transition: all 0.1s ease-in-out;
+}
+
+.output-panel button:hover {
+    transform: scale(1.05);
+    background-color: var(--Strong-cyan);
+    box-shadow: 0px 0px 4px 0px var(--Strong-cyan); 
+    cursor: pointer;
+    color: var(--White);
+}
+
+.output-panel button:active {
+    transform: scale(0.95);
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    #dollar-icon {
+        transform: translateY(10px);
+    }
+    #person-icon {
+        transform: translateY(12px);
+    }
+    body {
+        background-color: var(--Light-grayish-cyan-2);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .panel {
+        flex-direction: column;
+        width: 340px;
+        max-width: width 100vw;
+    }
+    .output-panel {
+        width: 85%;
+    }
+    .input-panel form:last-child label {
+        width: 20rem;
+    }
+    input {
+        display: inline-block;
+        width: 170%;
+        font-size: 24px;
+    }
+    form:nth-child(2) {
+        width: 22rem;
+    }
+    form:nth-child(2) button {
+        padding: 0.5em 5.5rem 0.5em 4rem;
+        margin: 0 10px 10px 0;
+        width: 60px;
+        border: none;
+        background-color: var(--Very-dark-cyan);
+        color: white;
+        border-radius: 0.2rem;
+        font-size: 24px;
+        transition: all 0.1s ease-in-out;
+    }
+    form:nth-child(2) input {
+        border: none;
+        text-align: end;
+        width: 10rem;
+        border-radius: 0.2rem;
+        font-size: small;
+        text-align: end;
+        transition: all 0.1s ease-in-out;
+    }
+    form:nth-child(2) input::placeholder {
+        border: none;
+        text-align: center;
+        font-size: large;
+    }
+}
+footer {
+    margin-top: 1.2rem;
+    font-weight: 700;
+    font-size: x-small;
+}
